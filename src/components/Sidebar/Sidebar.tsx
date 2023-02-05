@@ -62,14 +62,14 @@ export const Sidebar = () => {
       </div>
 
       <button
-        className='bg-black bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2 focus:outline-none'
+        className='bg-black bg-gradient-to-r from-green to-blue-400 w-8/12 lg:w-36 2xl:w-8/12  rounded-full py-2 px-5 text-white my-2 focus:outline-none'
         onClick={() => window.open('mailto:solidmax@list.ru')}
       >
         Email me
       </button>
       <button
         onClick={changeTheme}
-        className='bg-gradient-to-r bg-black from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2'
+        className='bg-gradient-to-r bg-black from-green to-blue-400 w-8/12 lg:w-36 2xl:w-8/12  rounded-full py-2 px-5 text-white my-2'
       >
         Toggle theme
       </button>
