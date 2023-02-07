@@ -33,7 +33,7 @@ export const Bar: FC<BarProps> = ({ data: { Icon, name, level } }) => {
         initial='initial'
         animate='animate'
       >
-        <Icon className='mr-3' />
+        <Icon className='mr-3 w-6 h-6 dark:text-dark-200' />
         {name}
       </motion.div>
     </div>

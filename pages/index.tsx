@@ -1,16 +1,10 @@
 import Head from 'next/head'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { ServiceCrd } from '../src/components'
 import { services } from '../data'
 import { motion } from 'framer-motion'
 import { fadeInUp, routerAnimation, stagger } from '../animations'
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPage,
-} from 'next'
+import { GetServerSidePropsContext } from 'next'
 
 const Home: FC = ({ endpoint }: any) => {
   return (
@@ -64,7 +58,6 @@ export default Home
 export const getServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
-  // console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
   // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/services`)
   // const data = await res.json()
 
@@ -74,16 +67,3 @@ export const getServerSideProps = async (
     },
   }
 }
-
-// export const getStaticProps = async (context: GetStaticPropsContext) => {
-//   const res = await fetch('http://localhost:3000/api/services')
-//   const data = await res.json()
-//
-//   console.log('getStaticProps', data)
-//
-//   return {
-//     props: {
-//       data: data.data,
-//     },
-//   }
-// }

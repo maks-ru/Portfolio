@@ -1,12 +1,17 @@
 import { RiComputerLine } from 'react-icons/ri'
-import { FaServer } from 'react-icons/fa'
+import { FaReact, FaServer } from 'react-icons/fa'
 import { AiOutlineAntDesign, AiOutlineApi } from 'react-icons/ai'
 import { MdDeveloperMode } from 'react-icons/md'
 import { Project, Service, Skill } from './types'
 
 import youtubeClone from './public/assets/images/youtubeClone.png'
 
-import { BsCircleFill } from 'react-icons/bs'
+import { BsCircleFill, BsFillBootstrapFill } from 'react-icons/bs'
+import { FiFigma } from 'react-icons/fi'
+import { SiMaterialui, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { TbBrandNextjs } from 'react-icons/tb'
+import { RiVuejsFill } from 'react-icons/ri'
+import { DiJavascript1 } from 'react-icons/di'
 
 export const services: Service[] = [
   {
@@ -49,56 +54,51 @@ export const services: Service[] = [
 
 export const languages: Skill[] = [
   {
-    Icon: BsCircleFill,
-    name: 'Python',
-    level: '45',
-  },
-  {
-    Icon: BsCircleFill,
-    name: 'Java Script',
-    level: '60',
-  },
-  {
-    Icon: BsCircleFill,
-    name: 'React Native',
-    level: '80',
-  },
-  {
-    Icon: BsCircleFill,
-    name: 'React',
+    Icon: DiJavascript1,
+    name: 'Javascript',
     level: '70',
   },
   {
-    Icon: BsCircleFill,
-    name: 'Django',
-    level: '80',
+    Icon: SiTypescript,
+    name: 'Typescript',
+    level: '90',
   },
   {
-    Icon: BsCircleFill,
-    name: 'Bootstrap',
-    level: '80',
+    Icon: FaReact,
+    name: 'React',
+    level: '60',
+  },
+  {
+    Icon: TbBrandNextjs,
+    name: 'Next',
+    level: '50',
+  },
+  {
+    Icon: RiVuejsFill,
+    name: 'Vue',
+    level: '30',
   },
 ]
 
 export const tools: Skill[] = [
   {
-    Icon: BsCircleFill,
+    Icon: FiFigma,
     name: 'Figma',
     level: '85',
   },
   {
-    Icon: BsCircleFill,
-    name: 'Photoshop',
+    Icon: SiMaterialui,
+    name: 'Materialui',
     level: '45',
   },
   {
-    Icon: BsCircleFill,
-    name: 'Illustrator',
+    Icon: SiTailwindcss,
+    name: 'Tailwindcss',
     level: '60',
   },
   {
-    Icon: BsCircleFill,
-    name: 'Framer',
+    Icon: BsFillBootstrapFill,
+    name: 'Bootstrap',
     level: '45',
   },
 ]
