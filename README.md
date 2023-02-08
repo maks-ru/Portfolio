@@ -1,6 +1,4 @@
-## [Resume](https://https://portfolio-maks-ru.vercel.app/)
-
-## Сайт резуме.
+## [Portfolio](https://portfolio-maks-ru.vercel.app/)
 
 ### Для запуска приложения npm start
 
