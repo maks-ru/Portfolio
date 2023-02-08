@@ -4,14 +4,14 @@ import { useRouter } from 'next/router'
 
 interface NavItemProps {
   activeItem: string
-  serActiveItem: Function
+  setActiveItem: Function
   name: string
   route: string
 }
 
 const NavItem: FC<NavItemProps> = ({
   activeItem,
-  serActiveItem,
+  setActiveItem,
   name,
   route,
 }) => {
@@ -20,7 +20,7 @@ const NavItem: FC<NavItemProps> = ({
       <a>
         <span
           className='hover:text-green ease-in duration-150'
-          onClick={() => serActiveItem(name)}
+          onClick={() => setActiveItem(name)}
         >
           {name}
         </span>
@@ -41,9 +41,6 @@ export const Navbar = () => {
     if (pathname === '/projects') {
       serActiveItem('Projects')
     }
-    if (pathname === '/resume') {
-      serActiveItem('Resume')
-    }
   }, [])
 
   return (
@@ -54,21 +51,15 @@ export const Navbar = () => {
       <div className='flex space-x-5 text-lg'>
         <NavItem
           activeItem={activeItem}
-          serActiveItem={serActiveItem}
+          setActiveItem={serActiveItem}
           name='About'
           route='/'
         />
         <NavItem
           activeItem={activeItem}
-          serActiveItem={serActiveItem}
+          setActiveItem={serActiveItem}
           name='Projects'
           route='/projects'
-        />
-        <NavItem
-          activeItem={activeItem}
-          serActiveItem={serActiveItem}
-          name='Resume'
-          route='/resume'
         />
       </div>
     </div>

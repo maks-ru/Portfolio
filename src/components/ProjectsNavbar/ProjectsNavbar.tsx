@@ -34,8 +34,8 @@ export const ProjectsNavbar: FC<ProjectsNavbarProps> = props => {
     <div className='flex space-x-3 px-3 py-2 list-none overflow-x-auto'>
       <NavItem value='all' {...props} />
       <NavItem value='react' {...props} />
-      <NavItem value='mongo' {...props} />
-      <NavItem value='django' {...props} />
+      <NavItem value='next' {...props} />
+      <NavItem value='javascript' {...props} />
       <NavItem value='node' {...props} />
     </div>
   )

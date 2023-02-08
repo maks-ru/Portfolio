@@ -4,7 +4,7 @@ import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 import { BsTelegram } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
 import { GiTie } from 'react-icons/gi'
-import UserLogo from '/public/assets/images/max.jpg'
+import UserLogo from '/public/assets/images/avatar/max.jpg'
 import { useTheme } from 'next-themes'
 
 export const Sidebar = () => {

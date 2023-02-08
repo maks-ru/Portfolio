@@ -50,7 +50,7 @@ const Projects = () => {
           <motion.div
             variants={fadeInUp}
             className='col-span-12 md:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-200 rounded-lg'
-            key={project.name}
+            key={project.id}
           >
             <ProjectCard
               project={project}
