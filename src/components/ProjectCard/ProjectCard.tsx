@@ -1,15 +1,17 @@
 import React, { FC } from 'react'
+import { ModalCard } from '../Modal'
+import Image from 'next/image'
+
 import { Project } from '../../../types'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { AiFillGithub, AiFillProject } from 'react-icons/ai'
 import { MdClose } from 'react-icons/md'
 import { fadeInUp, stagger } from '../../../animations'
 
 interface ProjectCardProps {
   project: Project
-  showDetail: null | number
-  setShowDetail: (id: null | number) => void
+  showDetail: boolean
+  setShowDetail: (active: boolean) => void
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
@@ -32,13 +34,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         src={image_path}
         alt={name}
         className='cursor-pointer'
-        onClick={() => setShowDetail(id)}
+        onClick={() => setShowDetail(true)}
         layout='responsive'
         height='120'
         width='180'
       />
       <p className='my-2'>{name}</p>
-      {showDetail === id && (
+      <ModalCard active={showDetail} setActive={setShowDetail}>
         <div className='fixed grid md:grid-cols-2 z-10 overflow-auto inset-x-2.5 sm:inset-x-1/4 h-auto top-20 md:top-1/4 gap-x-12 text-black bg-gray-100 dark:text-white dark:bg-dark-100 p-2 md:p-10 rounded-lg'>
           <motion.div variants={stagger} initial='initial' animate='animate'>
             <motion.div variants={fadeInUp} className='border-4 border-ray-100'>
@@ -79,7 +81,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               {name}
             </motion.h2>
             <motion.h3 variants={fadeInUp} className='mb-3 font-medium'>
-              {description}
+              {description}/
             </motion.h3>
             <motion.div
               variants={fadeInUp}
@@ -96,13 +98,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             </motion.div>
           </motion.div>
           <button
-            onClick={() => setShowDetail(null)}
+            onClick={() => setShowDetail(false)}
             className='absolute top-3 right-3 rounded-full focus:outline-none bg-gray-200 dark:bg-dark-200'
           >
             <MdClose size={30} />
           </button>
         </div>
-      )}
+      </ModalCard>
     </div>
   )
 }

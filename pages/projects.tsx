@@ -5,11 +5,12 @@ import { ProjectCard, ProjectsNavbar } from '../src/components'
 import { Category } from '../types'
 import { fadeInUp, routerAnimation, stagger } from '../animations'
 import Head from 'next/head'
+import ModalCard from '../src/components/Modal/ModalCard'
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData)
   const [active, setActive] = useState('all')
-  const [showDetail, setShowDetail] = useState<number | null>(null)
+  const [showDetail, setShowDetail] = useState<boolean>(false)
 
   const handlerFilterCategory = (category: Category | 'all') => {
     if (category === 'all') {
@@ -46,6 +47,7 @@ const Projects = () => {
         animate='animate'
         className='relative grid grid-cols-12 gap-4 my-3'
       >
+        <ModalCard active={showDetail} setActive={setShowDetail} />
         {projects.map(project => (
           <motion.div
             variants={fadeInUp}
