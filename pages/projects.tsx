@@ -5,7 +5,6 @@ import { ProjectCard, ProjectsNavbar } from '../src/components'
 import { Category } from '../types'
 import { fadeInUp, routerAnimation, stagger } from '../animations'
 import Head from 'next/head'
-import ModalCard from '../src/components/Modal/ModalCard'
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData)
@@ -47,7 +46,6 @@ const Projects = () => {
         animate='animate'
         className='relative grid grid-cols-12 gap-4 my-3'
       >
-        <ModalCard active={showDetail} setActive={setShowDetail} />
         {projects.map(project => (
           <motion.div
             variants={fadeInUp}
